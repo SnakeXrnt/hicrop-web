@@ -148,6 +148,18 @@
 
         window.onload = type;
 
+        document.addEventListener("DOMContentLoaded", function() {
+            const loginButton = document.querySelector(".button-login");
+            const joinButton = document.querySelector(".button-join");
+
+            const redirectToLoginPage = () => {
+                window.location.href = "watchlist.html";
+            };
+
+            loginButton.addEventListener("click", redirectToLoginPage);
+            joinButton.addEventListener("click", redirectToLoginPage);
+        });
+
 
 
 

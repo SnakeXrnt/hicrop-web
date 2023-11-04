@@ -127,6 +127,18 @@
 
         window.onload = type;
 
+        document.addEventListener("DOMContentLoaded", function() {
+            const loginButton = document.querySelector(".button-login");
+            const joinButton = document.querySelector(".button-join");
+
+            const redirectToLoginPage = () => {
+                window.location.href = "login.html";
+            };
+
+            loginButton.addEventListener("click", redirectToLoginPage);
+            joinButton.addEventListener("click", redirectToLoginPage);
+        });
+
 
 
     </script>
@@ -164,13 +176,10 @@
                 partner_exchange
                 </span>
         </div>
-
-        <div class="button-div typing-done">
-            <button class="button-login">Log in</button>
-            <button class="button-join">Join now</button>
-        </div>
-
-
+            <div class="button-div typing-done">       
+                <button class="button-login">Log in</button>
+                <button class="button-join">Join now</button>
+            </div>
     </div>
 </body>
 </html>
