@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi-Crop Watchlist | Your digital algicultural commodity auction</title>
+    
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            font-family: 'Nunito Sans';
+            background-color: #021608;
+        }
+
+        
+
+        .frame {
+            display: flex;
+            width: 468px;
+            border: 2px solid #000000;
+            height: 100vh;
+            color: black;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            background-color: #021608;
+
+        }
+
+        .top-bar {
+            position: fixed;
+            top:0;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 468px;
+            margin: 0px;
+            background-color: #000000;
+        }
+
+        @media (max-width: 468px) {
+            .top-bar {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 280px) {
+            .top-bar h1 {
+                font-size: 7vw;
+            }
+        }
+
+
+        .top-bar span , h1 {
+            margin: 2vh;
+        }
+
+
+
+        .logo-topbar {
+            max-width: 70px;
+            max-height: auto;
+        }
+
+        .hollow-topbar {
+            padding-top: 20px;
+        }
+
+        
+
+        .post {
+            color: white;
+            /* background-color: #000000; */
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+        }
+
+        .profile-name .profile-picture {
+            width: 50px;
+            height: 50px;
+        }
+
+        .profile-name {
+            display: flex;
+            align-items: center;
+        }
+
+        .post-des {
+            padding-left: 50px;
+        }
+
+        .post-pict {
+            display: flex;
+            overflow-x: scroll;
+        }
+
+
+        .post-pict img {
+            width: 80%;
+            height: auto;
+        }
+
+        .reaction {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .reaction1 {
+            display: flex;
+            align-items: center;
+        }
+
+        .bottom-bar {
+            position: fixed;
+            bottom:0;
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 468px;
+            margin: 0px;
+            background-color: #000000;
+            height: 6vh;
+            border-top: 1px solid white;
+        }
+
+        .bottom-filler {
+            display: flex;
+            min-height: 6vh;
+            width: 100%;
+        }
+
+        
+
+        @media (max-width: 468px) {
+            .bottom-bar {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 280px) {
+            .bottom-bar h1 {
+                font-size: 7vw;
+            }
+        }
+
+
+        .bottom-bar span , h1 {
+            margin: 2vh;
+        }
+
+        .logo-bottombar {
+            max-width: 70px;
+            max-height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .description a {
+        color: rgb(0, 140, 255); /* Set the color for the link text */
+        text-decoration: underline; /* Underline the link text */
+        }
+
+         
+
+
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="frame">
+        <div class="top-bar">
+            
+
+            <h1> <a href="profile.html"><span class="material-symbols-outlined">
+                menu
+                </span></a>  Discussion</h1>
+
+            <span class="material-symbols-outlined">
+                <img class="logo-topbar" src="no-text-logo.png">
+                </span>
+        </div>
+        <p class="hollow-topbar">p</p>
+        <div class="post">
+            <div class="profile-name">
+                <div class="profile-picture">
+                    <img src="logo.png" width="100%" height="100%">
+                </div>
+                <div class="name">
+                    @VeniXzX1 | 10 Jam yang lalu
+                </div>
+            </div>
+            <div class="post-des"> 
+                <p class="description">
+                    Alhamdulillah, saya baru saja memenangkan lelang komoditas yaitu Beras Merah di Toko <a>@romlirusli</a>. Saya berhasil mendapatkan 500Kg komoditas dengan harga Rp. 8.000/Kg.
+
+Saya sangat senang bisa memenangkan lelang ini. Ini adalah hasil kerja keras saya dan tim selama berbulan-bulan. Kami telah bekerja keras untuk mencari petani terbaik dan komoditas terbaik.
+                </p>
+            </div>
+            <div class="post-pict">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170340713725169754/th.png?ex=6558afba&is=65463aba&hm=509ee6df0d0d790bb12dfa9d82090656b7da6854a5d21664f17b0d09a5629c70&">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170346555686010990/th.png?ex=6558b52a&is=6546402a&hm=3ba0418204f61c3a2f410f1fabaa2c5ee334de10552458ab67c541373addf064&">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170346596450455643/th.png?ex=6558b534&is=65464034&hm=d5252c5a56ea3e8b303029d84de6f4a1aa9c7a7a65d2a3fab8a6265919f74f92&">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170346627446341632/th.png?ex=6558b53b&is=6546403b&hm=2b4a6eb5e585d50295580384d9518920a0bb62b583e6d6887df1cd0d3c4c1a37&">
+            </div>
+            <div class="reaction">
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> favorite </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+            </div>
+        </div>
+        <div class="post">
+            <div class="profile-name">
+                <div class="profile-picture">
+                    <img src="logo.png" width="100%" height="100%">
+                </div>
+                <div class="name">
+                    @asimonms.06 | 5 Jam yang lalu
+                </div>
+            </div>
+            <div class="post-des">
+                <p class="description">
+                    "Mohon bantuan, padi saya tidak tumbuh. Saya sudah melakukan semua yang saya bisa, tapi tetap saja tidak ada hasilnya.
+
+Saya sudah menanam benih padi dengan benar, memberikan pupuk dan air yang cukup, dan merawatnya dengan baik. Namun, tanaman padi saya tetap saja tidak tumbuh.
+                </p>
+            </div>
+            <div class="post-pict">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170348128935886959/th.png?ex=6558b6a1&is=654641a1&hm=732fe4867099046da5c02f40c3396700c5dcdf5a6750f0ff9dd582965343cc29&">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170348068193968138/Kondisi-Padi-Terkena-Serangan-Hama-Wereng-Batang-Coklat.png?ex=6558b693&is=65464193&hm=d1db50ad07158213398902a16ac71d1e1fac649dbd0b10caf016b30d221da027&">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170348031430901870/th.png?ex=6558b68a&is=6546418a&hm=759bd364dacff2995fe0db3c4a3d3c04891b7896da6cc08a868f39b0299449dc&">
+            </div>
+            <div class="reaction">
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> favorite </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+            </div>
+        </div>
+        <div class="post">
+            <div class="profile-name">
+                <div class="profile-picture">
+                    <img src="logo.png" width="100%" height="100%">
+                </div>
+                <div class="name">
+                    @Stvkrysn | 2 Hari yang lalu
+                </div>
+            </div>
+            <div class="post-des">
+                <p class="description">
+                    "Saya adalah petani kopi di [nama daerah]. Saya baru mulai belajar tentang kopi, dan saya masih bingung apa perbedaan antara kopi arabika dan kopi luwak. Saya harap ada yang bisa membantu saya menjelaskan perbedaan antara kopi arabika dan kopi luwak.
+                </p>
+            </div>
+            <div class="post-pict">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170349042597896272/th.png?ex=6558b77b&is=6546427b&hm=ee91327fcbede59e926f8f9f28487da8d8df632b84e97962903d91fdde6a51f2&">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170349078165585961/th.png?ex=6558b784&is=65464284&hm=48b1cd0bde20070d4c8a7a82153539ce4cf72f258e3f4c6ce8d0f15cf3b1855e&">
+            </div>
+            <div class="reaction">
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> favorite </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+            </div>
+        </div>
+        <div class="post">
+            <div class="profile-name">
+                <div class="profile-picture">
+                    <img src="logo.png" width="100%" height="100%">
+                </div>
+                <div class="name">
+                    @Nepil_2006 | 8 Jam yang lalu
+                </div>
+            </div>
+            <div class="post-des">
+                <p class="description">
+                    
+Caption:
+
+"Bertani adalah profesi yang mulia dan penuh tantangan. Untuk menjadi petani yang handal, kita harus memiliki pengetahuan dan keterampilan yang memadai. Belajarlah terus menerus, Bersikaplah Inovatif, dan bersikaplah ramah lingkungan Mari kita bersama-sama menjadi petani yang handal dan berkontribusi untuk memajukan pertanian Indonesia.
+                </p>
+            </div>
+            <div class="post-pict">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170350405646037052/th.png?ex=6558b8c0&is=654643c0&hm=bf6ed1fa4549f18cbefa3d118d30732c4b885e4abd274858247681bc7827d76e&">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170350344111411301/th.png?ex=6558b8b2&is=654643b2&hm=0e3e6969becbef11799659445ce41186eed3a8ef56f6ea13bb0142c09a6548d5&">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170350329569738772/th.png?ex=6558b8ae&is=654643ae&hm=d8aca6093f5dcbea0511fa1e18b0a2314b0ac3bc0e3d87dc5a62b2aa89b5b14e&">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170350374838874224/th.png?ex=6558b8b9&is=654643b9&hm=0787c02deb4880502d9bd8345331daac0f804b81db783704c58217a1ce03db2d&">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170350454769721726/th.png?ex=6558b8cc&is=654643cc&hm=f7c652d0e1b330b9f976fc99cc8951197a1169225fdc1944e3629d54b4bb8bf5&">
+            </div>
+            <div class="reaction">
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> favorite </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+            </div>
+        </div>
+        <div class="post">
+            <div class="profile-name">
+                <div class="profile-picture">
+                    <img src="logo.png" width="100%" height="100%">
+                </div>
+                <div class="name">
+                    Pebrian Romadoni | 1 hari yang lalu
+                </div>
+            </div>
+            <div class="post-des">
+                <p class="description">
+                    "Hey guys guwe baru saja memenangkan lelang komoditas Ubi kayu mentah di <a>@alexsudi</a>. Ini adalah kemenangan besar bagi guwe dan tim.
+
+guwe berhasil mendapatkan [jumlah] ton komoditas dengan harga [harga per ton]. Harga ini sangat kompetitif dan menguntungkan bagi petani.
+
+guwe sangat senang bisa memberikan dampak positif bagi petani. guwe harap dengan kemenangan ini, guwe bisa membantu meningkatkan kesejahteraan petani dan perekonomian Indonesia."
+                </p>
+            </div>
+            <div class="post-pict">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170352969825386496/th.png?ex=6558bb24&is=65464624&hm=72b36aa65d3b126f8913c10f8e55524b0af50f8589315fc06713f353f5322730&">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170352920932397187/th.png?ex=6558bb18&is=65464618&hm=4b2048047013a1590e2e16b29b598d9543fce118f29737fb8c6bca5971ca651a&">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170352894734770277/th.png?ex=6558bb12&is=65464612&hm=d222421b866f5c0ce3aacd5fcbfb32946c88f12aa6cb5a3041acb354f1a201a3&">
+                <img src="https://cdn.discordapp.com/attachments/864447060359118848/1170352941673222184/th.png?ex=6558bb1d&is=6546461d&hm=57fbd57d200bde204e7d7eb65b76ff5abeab64013828307f6db2a65f7d1e02d0&">
+            </div>
+            <div class="reaction">
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> favorite </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+                <div class="reaction1">
+                    <span class="material-symbols-outlined"> menu </span>
+                    <p>100k</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <a href="watchlist.html">
+                <span class="material-symbols-outlined">
+                    star
+                    </span>
+            </a>
+            <a href="discussion.html">
+                <span class="material-symbols-outlined">
+                    travel_explore
+                    </span>
+            </a>
+            <a href="marketplace.html">
+                <span class="material-symbols-outlined">
+                    storefront
+                    </span>
+            </a>
+            <a href="testing.html">
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                    </span>
+            </a>
+        </div>
+        
+        <div class="bottom-filler">
+            <p>p</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var description = document.getElementById('description');
+            if (description) {
+                var content = description.innerHTML;
+                var newContent = content.replace(/@(\w+)/g, '<a style="color:blue; text-decoration:underline;">@$1</a>');
+                description.innerHTML = newContent;
+                console.log("changed to blue @");
+            }
+        });
+    </script>
+</body>
+</html>

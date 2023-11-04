@@ -1,0 +1,497 @@
+<!--
+author Ethan Bastian
+email ethanbastian11@gmail.com
+create date 2023-11-02 14:34:35
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiCrop | Your digital algicultural commodity auction</title>
+    
+    <script>
+        const frame = document.querySelector('.frame');
+        const logoImage = document.getElementById('logo-image');
+
+        const frameWidth = frame.clientWidth;
+        const maxImageWidth = 0.4 * frameWidth;
+
+        logoImage.style.maxWidth = maxImageWidth + 'px';
+    </script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            font-family: 'Nunito Sans';
+            background-color: #021608;
+        }
+        .frame {
+            display: flex;
+            width: 468px;
+            border: 2px solid #000000;
+            height: max-content;
+            color: white;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            background-color: #021608;
+
+        }
+
+        .top-bar {
+            position: fixed;
+            top:0;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 468px;
+            margin: 0px;
+            background-color: #000000;
+        }
+
+        .topbar h1 {
+            flex: 5;
+        }
+
+        @media (max-width: 468px) {
+            .top-bar {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 280px) {
+            .top-bar h1 {
+                font-size: 7vw;
+            }
+        }
+
+
+        .top-bar span , h1 {
+            margin: 2vh;
+        }
+
+        .hot-offers-h1 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .hot-offers-h1 h1 {
+            padding-top: calc(50px + 25px);
+            font-size: large;
+            color: white;
+        }
+
+        .hot-offers {
+            display: flex;
+            width: 100%;
+            height: max-content;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .items {
+            display: flex;
+            flex-direction: column;
+            width: 40%; /* You can adjust this width as needed */
+            min-width: 150px; /* Add a minimum width to ensure items don't overlap */
+            color: white;
+            margin: 10px; /* Decrease the margin to provide more space */
+            margin-bottom: 20px; /* Add margin-bottom to create space between items */
+        }
+
+        .items .top-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: fit-content;
+            height: 200px;
+            background-color: black;
+            border: 10px solid black;
+            border-radius: 7.5px;
+        }
+
+        .bottom-items {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            background-color: rgb(60, 60, 60);
+            border: 1px solid rgb(60, 60, 60);
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .bottom-items h3,
+        h4,
+        p {
+            margin: 0;
+        }
+
+        .bot-right button {
+            width: 100%;
+            height: 100%;
+            font-family: 'Nunito Sans';
+            font-weight: bolder;
+            background-color: rgb(60, 60, 60);
+            border: 1px solid white;
+            color: white;
+        }
+
+        .top-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-pict {
+            width: 15%;
+            height: auto;
+        }
+
+        .best-seller .name {
+            display: flex;
+            align-items: center;
+            border-top: 1px solid white;
+            border-bottom : 1px solid white;
+        }
+
+        .best-seller .name .profile-pict {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .name-username h3, p{
+            margin: 1px;
+        }
+
+        .bottom-bar {
+            position: fixed;
+            bottom:0;
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 468px;
+            margin: 0px;
+            background-color: #000000;
+            height: 6vh;
+            border-top: 1px solid white;
+        }
+
+        .bottom-filler {
+            display: flex;
+            min-height: 6vh;
+            width: 100%;
+        }
+
+        
+
+        @media (max-width: 468px) {
+            .bottom-bar {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 280px) {
+            .bottom-bar h1 {
+                font-size: 7vw;
+            }
+        }
+
+
+        .bottom-bar span , h1 {
+            margin: 2vh;
+        }
+
+        .logo-bottombar {
+            max-width: 70px;
+            max-height: auto;
+        }
+
+        .profile-pict img {
+            width: 30vw;
+            height: 30vw;
+            object-fit: cover;
+            border: 2px solid white;
+            border-radius: 20vw;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+    <div class="frame">
+        <div class="top-bar">
+
+            <a href="profile.html">
+                <span class="material-symbols-outlined">
+                    menu
+                    </span>
+            </a>
+            
+
+            <h1>Marketplace</h1>
+
+            <span class="material-symbols-outlined">
+                search
+                </span>
+        </div>
+
+        <div class="hot-offers-h1">
+            <h1>Recommendation</h1>
+        </div>
+
+        <div class="hot-offers">
+            <div class="items">
+                <div class="top-img">
+                    <img src="https://cdn.discordapp.com/attachments/1153306524391854111/1169814453752180746/2Q.png?ex=6556c59b&is=6544509b&hm=7829192fe3fae3d7028ae394d7f07fd8dea58670df72e299983f473ae70f5d0e&"  >
+                </div>
+                <div class="bottom-items">
+                    <div class="bot-left">
+                        <h4>Ubi kayu Mentah</h4>
+                        <p>Alex Sudi</p>
+                        <p>4000</p>
+                    </div>
+                    <div class="bot-right">
+                        <a href="buying.html">
+                            <button>Place Offer</button>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="items">
+                <div class="top-img">
+                    <img id="logo-image" src="https://cdn.discordapp.com/attachments/1153306524391854111/1169814105557844079/Z.png?ex=6556c548&is=65445048&hm=26814f4e3c8a3c859438dcf103401ae692f601fae63f1b85e7bdc6cd3246971d&"  >
+                </div>
+                <div class="bottom-items">
+                    <div class="bot-left">
+                        <h4>Jagung Pipilan Kering</h4>
+                        <p>Moh Hatta</p>
+                        <p>3000</p>
+                    </div>
+                    <div class="bot-right">
+                        <button>Place Offer</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="items">
+                <div class="top-img">
+                    <img src="https://cdn.discordapp.com/attachments/1153306524391854111/1169813828364673094/9k.png?ex=6556c506&is=65445006&hm=da7f03b5da44da97f9284bbf4d3ab3386e8982e7c0fd8661fd3cae57f6252a11&"  >
+                </div>
+                <div class="bottom-items">
+                    <div class="bot-left">
+                        <h4>Sawit TBS</h4>
+                        <p>Wayne Henner</p>
+                        <p>1500</p>
+                    </div>
+                    <div class="bot-right">
+                        <button>Place Offer</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="items">
+                <div class="top-img">
+                    <img src="https://cdn.discordapp.com/attachments/1153306524391854111/1169813654011654174/beras-merah_43.png?ex=6556c4dd&is=65444fdd&hm=2a149c7f33320e081ae8b723fde3addca6de15f8d1d20c8591ad5c031337adba&" >
+                </div>
+                <div class="bottom-items">
+                    <div class="bot-left">
+                        <h4>Beras merah</h4>
+                        <p>Syarifudin</p>
+                        <p>10000</p>
+                    </div>
+                    <div class="bot-right">
+                        <button>Place Offer</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="items">
+                <div class="top-img">
+                    <img src="data:image/jpeg;base64,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"  >
+                </div>
+                <div class="bottom-items">
+                    <div class="bot-left">
+                        <h4>Mangga Madu</h4>
+                        <p>Ongky Setiawan</p>
+                        <p>12000</p>
+                    </div>
+                    <div class="bot-right">
+                        <button>Place Offer</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="items">
+                <div class="top-img">
+                    <img src="https://ahligizi.id/blog/wp-content/uploads/2021/08/sweet-potatoes-6348396_1920.jpg"  >
+                </div>
+                <div class="bottom-items">
+                    <div class="bot-left">
+                        <h4>Ubi jalar ungu</h4>
+                        <p>Wilson Alisandi</p>
+                        <p>6000</p>
+                    </div>
+                    <div class="bot-right">
+                        <button>Place Offer</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="items">
+                <div class="top-img">
+                    <img src="https://cdn.discordapp.com/attachments/1153306524391854111/1169821239557246996/data.png?ex=6556cbed&is=654456ed&hm=cba0a41821fb9c5b4b35cd9e853f7687306da6d187a7be73d226236534d7645d&"  >
+                </div>
+                <div class="bottom-items">
+                    <div class="bot-left">
+                        <h4>Jeruk Medan</h4>
+                        <p>Vergeo sinaga</p>
+                        <p>20000</p>
+                    </div>
+                    <div class="bot-right">
+                        <button>Place Offer</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="items">
+                <div class="top-img">
+                    <img src="https://cdn.discordapp.com/attachments/1153306524391854111/1169821336844120084/9k.png?ex=6556cc04&is=65445704&hm=12c08c32a65bf910a3b9624996033b485a12cebd9e1fc2a4c3bd455b214c50af&"  >
+                </div>
+                <div class="bottom-items">
+                    <div class="bot-left">
+                        <h4>Tenggiri Utuh</h4>
+                        <p>Devano Kristyono</p>
+                        <p>45000</p>
+                    </div>
+                    <div class="bot-right">
+                        <button>Place Offer</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="items">
+                <div class="top-img">
+                    <img src="https://cdn.discordapp.com/attachments/1153306524391854111/1169821420587589632/images.png?ex=6556cc18&is=65445718&hm=677a4524d2a765685404f71a3bf79f5c7c06303ef0cfa9100d7cbc585bcc8f49&"  >
+                </div>
+                <div class="bottom-items">
+                    <div class="bot-left">
+                        <h4>Kopi Arabika</h4>
+                        <p>Marvin Romli</p>
+                        <p>80000</p>
+                    </div>
+                    <div class="bot-right">
+                        <button>Place Offer</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="items">
+                <div class="top-img">
+                    <img src="logo.png"  >
+                </div>
+                <div class="bottom-items">
+                    <div class="bot-left">
+                        <h4>Cumi Cumi asin</h4>
+                        <p>Steven Gregorius</p>
+                        <p>80000</p>
+                    </div>
+                    <div class="bot-right">
+                        <button>Place Offer</button>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <div class="best-seller">
+            <h2>Best Sellers of the month</h2>
+            
+            <div class="name">
+                <h1>1</h1>
+                <div class="profile-pict">
+                    <img src="logo.png" width="100%" height="100%">
+                </div>
+                <div class="name-username">
+                    <h3>Marvin Romli</h3>
+                    <p>@marvincibai</p>
+                </div>
+                
+            </div>
+            <div class="name">
+                <h1>2</h1>
+                <div class="profile-pict">
+                    <img src="logo.png" width="100%" height="100%">
+                </div>
+                <div class="name-username">
+                    <h3>Marvin Romli</h3>
+                    <p>@marvincibai</p>
+                </div>
+                
+            </div>
+            <div class="name">
+                <h1>3</h1>
+                <div class="profile-pict">
+                    <img src="logo.png" width="100%" height="100%">
+                </div>
+                <div class="name-username">
+                    <h3>Marvin Romli</h3>
+                    <p>@marvincibai</p>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="bottom-bar">
+            <a href="watchlist.html">
+                <span class="material-symbols-outlined">
+                    star
+                    </span>
+            </a>
+            <a href="discussion.html">
+                <span class="material-symbols-outlined">
+                    travel_explore
+                    </span>
+            </a>
+            <a href="marketplace.html">
+                <span class="material-symbols-outlined">
+                    storefront
+                    </span>
+            </a>
+            <a href="testing.html">
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                    </span>
+            </a>
+        </div>
+        
+        <div class="bottom-filler">
+            <p>p</p>
+        </div>
+
+    </div>
+</body>
+</html>
