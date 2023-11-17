@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi-Crop Watchlist | Your digital algicultural commodity auction</title>
+    
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            font-family: 'Nunito Sans';
+            background-color: #021608;
+            
+        }
+
+        
+
+        .frame {
+            display: flex;
+            width: 468px;
+            border: 2px solid #000000;
+            height: fit-content;
+            color: black;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            background-color: #021608;
+
+        }
+
+        .top-bar {
+            position: fixed;
+            top:0;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 468px;
+            margin: 0px;
+            background-color: #000000;
+        }
+
+        @media (max-width: 468px) {
+            .top-bar {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 280px) {
+            .top-bar h1 {
+                font-size: 7vw;
+            }
+        }
+
+
+        .top-bar span , h1 {
+            margin: 2vh;
+        }
+        
+
+
+
+        .logo-topbar {
+            max-width: 70px;
+            max-height: auto;
+        }
+
+        .secondnavbar {
+            position: fixed;
+            top:71px;
+            display: flex;
+            height: 40px;
+            width: 468px;
+            justify-content: space-around;
+            background-color: black;
+            color: white;
+        }
+
+        @media (max-width: 468px) {
+            .secondnavbar {
+                top:77.6px;
+            }
+        }
+
+        .hollow-topbar {
+            height: 43px;
+        }
+
+        .chats {
+            width: 468px;
+            height: 50px;
+            display: flex;
+            background-color: #032a0f;
+            align-items: center;
+            margin: 2px 0;
+            justify-content: space-between;
+            padding: 0 5px;
+            box-sizing: border-box;
+        }
+
+        .chats img {
+            background-color: #021608;
+            border-radius: 200px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .chats .info1 {
+            width: 70%;
+        }
+
+        .chats h5, .chats p {
+            margin: 0;
+        }
+
+        .chats p {
+            font-size: 80%;
+        }
+        
+        .chats .info2 {
+            width: 15%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chats .notif {
+            background-color: #021608;
+            border-radius: 10px;
+            padding: 0 5px;
+            width: max-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        
+        /* <a href="#" class="chats">
+            <img src="" alt="" class="pp">
+            <div class="info1">
+                <h5 class="title">Chat Title</h5>
+                <p class="recent">Recent: Recent</p>
+            </div>
+            <div class="info2">
+                <div class="date">Sep 03</div>
+                <div class="notif">10</div>
+            </div>
+        </a> */
+        
+
+        .hollow-topbar {
+            padding-top: 40px;
+        }
+
+
+        .bottom-filler {
+            display: flex;
+            min-height: 6vh;
+            width: 100%;
+        }
+
+        .bottom-bar {
+            position: fixed;
+            bottom:0;
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 468px;
+            margin: 0px;
+            background-color: #000000;
+            height: 6vh;
+            border-top: 1px solid white;
+        }
+
+        .bottom-filler {
+            display: flex;
+            min-height: 6vh;
+            width: 100%;
+        }
+
+        
+
+        @media (max-width: 468px) {
+            .bottom-bar {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 280px) {
+            .bottom-bar h1 {
+                font-size: 7vw;
+            }
+        }
+
+
+        .bottom-bar span , h1 {
+            margin: 2vh;
+        }
+
+        .logo-bottombar {
+            max-width: 70px;
+            max-height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .description a {
+        color: rgb(0, 140, 255); /* Set the color for the link text */
+        text-decoration: underline; /* Underline the link text */
+        }
+
+         
+
+
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="frame">
+        <div class="top-bar">
+            
+
+            <h1> <a href="profile.html"><span class="material-symbols-outlined">
+                menu
+                </span></a>  Discussion</h1>
+
+            <span class="material-symbols-outlined">
+                <img class="logo-topbar" src="no-text-logo.png">
+                </span>
+        </div>
+        
+        <div class="secondnavbar">
+            <div class="nav nav1"><a href="./discussion.html">FYP</a></div>
+            <div class="nav nav1"><a href="./following.html">Following</a></div>
+            <div class="nav nav1"><a href="./discussion.html"><u>Chat</u></a></div>
+            
+        </div>
+
+        <p class="hollow-topbar">p</p>
+
+
+        <a href="#" class="chats">
+            <img src="./IMG_2528.jpg" alt="" class="pp">
+            <div class="info1">
+                <h5 class="title">Chat Title</h5>
+                <p class="recent">Recent: Recent</p>
+            </div>
+            <div class="info2">
+                <div class="date">Sep 03</div>
+                <p class="notif">10</p>
+            </div>
+        </a>
+
+        <a href="#" class="chats">
+            <img src="" alt="" class="pp">
+            <div class="info1">
+                <h5 class="title">Chat Title</h5>
+                <p class="recent">Recent: Recent</p>
+            </div>
+            <div class="info2">
+                <div class="date">Sep 03</div>
+                <p class="notif">10</p>
+            </div>
+        </a>
+
+        <a href="#" class="chats">
+            <img src="" alt="" class="pp">
+            <div class="info1">
+                <h5 class="title">Chat Title</h5>
+                <p class="recent">Recent: Recent</p>
+            </div>
+            <div class="info2">
+                <div class="date">Sep 03</div>
+                <p class="notif">10</p>
+            </div>
+        </a>
+
+        <a href="#" class="chats">
+            <img src="" alt="" class="pp">
+            <div class="info1">
+                <h5 class="title">Chat Title</h5>
+                <p class="recent">Recent: Recent</p>
+            </div>
+            <div class="info2">
+                <div class="date">Sep 03</div>
+                <p class="notif">10</p>
+            </div>
+        </a>
+
+        <a href="#" class="chats">
+            <img src="" alt="" class="pp">
+            <div class="info1">
+                <h5 class="title">Chat Title</h5>
+                <p class="recent">Recent: Recent</p>
+            </div>
+            <div class="info2">
+                <div class="date">Sep 03</div>
+                <p class="notif">10</p>
+            </div>
+        </a>
+
+        <a href="#" class="chats">
+            <img src="" alt="" class="pp">
+            <div class="info1">
+                <h5 class="title">Chat Title</h5>
+                <p class="recent">Recent: Recent</p>
+            </div>
+            <div class="info2">
+                <div class="date">Sep 03</div>
+                <p class="notif">10</p>
+            </div>
+        </a>
+       
+        <div class="bottom-bar">
+            <a href="watchlist.html">
+                <span class="material-symbols-outlined">
+                    star
+                    </span>
+            </a>
+            <a href="discussion.html">
+                <span class="material-symbols-outlined">
+                    travel_explore
+                    </span>
+            </a>
+            <a href="marketplace.html">
+                <span class="material-symbols-outlined">
+                    storefront
+                    </span>
+            </a>
+            <a href="testing.html">
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                    </span>
+            </a>
+        </div>
+
+        <div class="bottom-filler">
+            <p></p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var description = document.getElementById('description');
+            if (description) {
+                var content = description.innerHTML;
+                var newContent = content.replace(/@(\w+)/g, '<a style="color:blue; text-decoration:underline;">@$1</a>');
+                description.innerHTML = newContent;
+                console.log("changed to blue @");
+            }
+        });
+    </script>
+</body>
+</html>

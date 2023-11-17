@@ -1,0 +1,400 @@
+<!--
+author Ethan Bastian
+email ethanbastian11@gmail.com
+create date 2023-11-02 14:34:35
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiCrop | Your digital algicultural commodity auction</title>
+    
+    <script>
+        const frame = document.querySelector('.frame');
+        const logoImage = document.getElementById('logo-image');
+
+        const frameWidth = frame.clientWidth;
+        const maxImageWidth = 0.4 * frameWidth;
+
+        logoImage.style.maxWidth = maxImageWidth + 'px';
+    </script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            font-family: 'Nunito Sans';
+            background-color: #021608;
+        }
+        .frame {
+            display: flex;
+            width: 468px;
+            border: 2px solid #000000;
+            height: max-content;
+            color: white;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            background-color: #021608;
+
+        }
+
+        .top-bar {
+            position: fixed;
+            top:0;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 468px;
+            margin: 0px;
+            background-color: #000000;
+        }
+
+        .topbar h1 {
+            flex: 5;
+        }
+
+        @media (max-width: 468px) {
+            .top-bar {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 280px) {
+            .top-bar h1 {
+                font-size: 7vw;
+            }
+        }
+
+
+        .top-bar span , h1 {
+            margin: 2vh;
+        }
+
+        .secondnavbar {
+            position: fixed;
+            top:70px;
+            display: flex;
+            height: 40px;
+            width: 468px;
+            justify-content: space-around;
+            background-color: black;
+            color: white;
+        }
+
+        .hot-offers-h1 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .hot-offers-h1 h1 {
+            padding-top: calc(50px + 25px);
+            font-size: large;
+            color: white;
+        }
+
+        .hot-offers {
+            display: flex;
+            width: 100%;
+            height: max-content;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .items {
+            display: flex;
+            flex-direction: column;
+            width: 40%; /* You can adjust this width as needed */
+            min-width: 150px; /* Add a minimum width to ensure items don't overlap */
+            color: white;
+            margin: 10px; /* Decrease the margin to provide more space */
+            margin-bottom: 20px; /* Add margin-bottom to create space between items */
+        }
+
+        .items .top-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: fit-content;
+            height: 200px;
+            background-color: black;
+            border: 10px solid black;
+            border-radius: 7.5px;
+        }
+
+        .bottom-items {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            background-color: rgb(60, 60, 60);
+            border: 1px solid rgb(60, 60, 60);
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .bottom-items h3,
+        h4,
+        p {
+            margin: 0;
+        }
+
+        .bot-right button {
+            width: 100%;
+            height: 100%;
+            font-family: 'Nunito Sans';
+            font-weight: bolder;
+            background-color: rgb(60, 60, 60);
+            border: 1px solid white;
+            color: white;
+        }
+
+        .top-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-pict {
+            width: 15%;
+            height: auto;
+        }
+
+        .best-seller .name {
+            display: flex;
+            align-items: center;
+            border-top: 1px solid white;
+            border-bottom : 1px solid white;
+        }
+
+        .best-seller .name .profile-pict {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .name-username h3, p{
+            margin: 1px;
+        }
+
+        .bottom-bar {
+            position: fixed;
+            bottom:0;
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 468px;
+            margin: 0px;
+            background-color: #000000;
+            height: 6vh;
+            border-top: 1px solid white;
+        }
+
+        .bottom-filler {
+            display: flex;
+            min-height: 6vh;
+            width: 100%;
+        }
+
+        
+
+        @media (max-width: 468px) {
+            .bottom-bar {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 280px) {
+            .bottom-bar h1 {
+                font-size: 7vw;
+            }
+        }
+
+
+        .bottom-bar span , h1 {
+            margin: 2vh;
+        }
+
+        .logo-bottombar {
+            max-width: 70px;
+            max-height: auto;
+        }
+
+        .profile-pict img {
+            object-fit: cover;
+            border: 2px solid white;
+            border-radius: 20vw;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .best-seller {
+            width: 100%;
+            margin: 5px;
+        }
+
+        .chats {
+            width: 468px;
+            height: 50px;
+            display: flex;
+            background-color: #032a0f;
+            align-items: center;
+            margin: 2px 0;
+            justify-content: space-between;
+            padding: 0 5px;
+            box-sizing: border-box;
+        }
+
+        .chats img {
+            background-color: #021608;
+            border-radius: 200px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .chats .info1 {
+            
+        }
+
+        .chats h5, .chats p {
+            margin: 0;
+        }
+
+        .chats p {
+            font-size: 80%;
+        }
+        
+        .chats .info2 {
+            width: 15%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chats .notif {
+            background-color: #021608;
+            border-radius: 10px;
+            padding: 0 5px;
+            width: max-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hollow-topbar {
+            padding-bottom: 80px;
+        }
+
+        .asker {
+            width: 80%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            margin-bottom: 2px solid white;
+        }
+
+        .asker h4 {
+            margin: 5px;
+            
+        }
+
+        .asker input{ 
+            
+        }
+
+        .asker .question-input input {
+            min-height: 5vh;
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid white;
+            color: white; /* added text color for better visibility */
+            padding: 5px; /* added padding for better spacing */
+            box-sizing: border-box; /* ensure padding is included in the width */
+            border-radius: 10px;
+        }
+        
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+    <div class="frame">
+        <div class="top-bar">
+
+            <a href="profile.html">
+                <span class="material-symbols-outlined">
+                    menu
+                    </span>
+            </a>
+            
+
+            <h1>Marketplace</h1>
+
+            <span class="material-symbols-outlined">
+                search
+                </span>
+        </div>
+
+        <div class="secondnavbar">
+            <div class="nav nav1"><a href="marketplace.html">Marketplace</a></div>
+            <div class="nav nav1"><a href="sell.html"><u>Sell</u></a></div>           
+        </div>
+
+        <p class="hollow-topbar">p</p>
+
+        <div class="asker">
+            <h4>Nama Barang</h4>
+            <div class="question-input">
+                <input type="text" placeholder="Type your question here">
+            </div>
+            <h4>Jenis</h4>
+            <div class="question-input">
+                <input type="text" placeholder="Type your question here">
+            </div>
+            <h4>Jumlah</h4>
+            <div class="question-input">
+                <input type="text" placeholder="Type your question here">
+            </div>
+            <h4>Terakhir Dipanen</h4>
+            <div class="question-input">
+                <input type="date">
+            </div>
+            <h4>Photo barang</h4>
+            <div class="question-input">
+                <input type="file">
+            </div>
+            <h4>Video barang</h4>
+            <div class="question-input">
+                <input type="file">
+            </div>
+        </div>
+
+        
+        
+        <div class="bottom-filler">
+            <p>p</p>
+        </div>
+
+    </div>
+</body>
+</html>

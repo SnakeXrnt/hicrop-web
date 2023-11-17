@@ -115,11 +115,18 @@
         }
 
         .profile-pict img {
-            width: 30vw;
-            height: 30vw;
+            width: 10vw;
+            height: 10vw;
             object-fit: cover;
             border: 2px solid white;
             border-radius: 20vw;
+        } 
+
+        @media (max-width: 468px) {
+            .profile-pict img {
+            width: 30vw;
+            height: 30vw;
+            }
         }
 
         a {
